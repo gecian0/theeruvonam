@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theervonam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles-reg.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/black inst logo .png" alt="">
+        </div>
+    </header>
+    
+    <div class="section"> 
+        <form id="submit-form"  action="">
+            <h2 for="fname">Name</h2>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.">
+            <br>  
+            <br>  
+            <h2 for="status">Semester</h2>
+            <select id="status" name="status">
+              <option value="S3">S3</option>
+              <option value="S5">S5</option>
+              <option value="S7">S7</option>
+            </select>
+            <br>  
+            <br> 
+
+            <h2 for="Work/Study Location">Events</h2>
+        <div class="eve"> 
+            <input type="checkbox" id="ev1" name="malayal-e-manka" value="Malayal-e-manka">
+            <label for="ev1">Malayal-e-manka</label><br>
+            <input type="checkbox" id="ev2" name="D.pookalam" value="Digital Pookalam Competition">
+            <label for="ev2"> Digital Pookalam Competition</label><br>
+            <input type="checkbox" id="ev3" name="valt" value="Valorant">
+            <label for="ev3"> Valorant Tournament</label><br>
+            <input type="checkbox" id="ev4" name="Blast from the past" value="Blast from the past">
+            <label for="ev4">Blast from the past</label><br>
+            <input type="checkbox" id="ev5" name="Kavile Paatumalsaram" value="Kavile Paatumalsaram">
+            <label for="ev5">Kavile Paatumalsaram</label><br>
+            <input type="checkbox" id="ev6" name="OnamLens" value="OnamLens">
+            <label for="ev6"> OnamLens</label><br>
+            <input type="checkbox" id="ev7" name="Onathallu" value="Onathallu">
+            <label for="ev7"> Onathallu</label><br>
+            <input type="checkbox" id="ev8" name="Dumb Charades" value="Dumb charades">
+            <label for="ev8"> Dumb charades</label><br>
+            <input type="checkbox" id="ev9" name="Tongue twister" value="Tongue Twister">
+            <label for="ev9">Tongue Twister</label><br>
+        </div>
+            <br>  
+            <br>
+            <h2 for="Whatsapp Number">Whatsapp number</h2>
+            <input type="text" id="Whatsapp Number" name="Whatsapp Number" placeholder="Whatsapp number">
+
+
+    <div class="button">
+        <button class="btn claim"  ><h5>Register</h5></button>
+    </div>
+        
+        <div class="footer">
+            <img src="images/black inst logo .png" alt="">
+        </div>
+        <p>Dept of Computer Science</p>
+    </div>
+<script>
+ $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxW93dZle3nLiiFk6WEP92oaehaomu8bugI6_BW/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    //alert("Form submitted successfully")
+                    //window.location.reload()
+                    window.location.href="success.html"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+</script>
+
+</body>
+</html>
